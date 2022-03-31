@@ -11,10 +11,10 @@
 
     <nav id="navbar" class="nav-menu navbar">
       <ul>
-        <li><a href="#" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Ajouter Proprietaire</span></a></li>
-        <li><a href="#" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Liste des proprataires</span></a></li>
-        <li><a href="#" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Liste des proprietés</span></a></li>
-        <li><a href="#" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>--------</span></a></li>
+        <li><a href="proprietaire" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Ajouter Proprietaire</span></a></li>
+        <li><a href="list" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Liste des proprataires</span></a></li>
+        <li><a href="#" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Ajouter une proprietés</span></a></li>
+        <li><a href="#" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Liste des propriétés</span></a></li>
         <li><a href="#" class="nav-link scrollto"><i class="bx bx-server"></i> <span>--------</span></a></li>
         <li><a href="#" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>---------</span></a></li>
       </ul>

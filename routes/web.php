@@ -15,6 +15,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/proprietaire', [ProprietaireController::class, 'ajout']);
 Route::post('/proprietaire', [ProprietaireController::class, 'recuperation']);
+Route::get('list', [ProprietaireController::class, 'list']);
 
 
 

@@ -41,10 +41,10 @@ body {
 
 .form-content .form-items {
     border: 3px solid black;
-    padding: 40px;
+    padding: 20px;
     display: inline-block;
     width: 100%;
-    min-width: 540px;
+    min-width: 900px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -100,7 +100,7 @@ body {
     background-color: #6C757D;
     outline: none;
     border: 0px;
-     box-shadow: none;
+    box-shadow: none;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active{

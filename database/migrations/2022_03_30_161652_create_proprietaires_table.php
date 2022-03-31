@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('civilite')->lenght(20);
             $table->integer('codePieceIdentite')->lenght(17);
             $table->integer('numeroPieceIdentite')->lenght(14);
-
+            $table->string('genre')->lenght(10);
             $table->timestamps();
         });
     }

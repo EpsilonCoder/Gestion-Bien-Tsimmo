@@ -14,7 +14,8 @@ class Proprietaire extends Model
         'lieuNaissance',
         'civilite',
         'codePieceIdentite',
-        'numeroPieceIdentite'
+        'numeroPieceIdentite',
+        'genre'
     ];
     use HasFactory;
     public function proprietes()
