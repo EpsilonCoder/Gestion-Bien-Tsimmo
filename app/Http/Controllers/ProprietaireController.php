@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ProprietaireController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function ajout()
     {
         return view('proprietaire.ajout');
@@ -25,6 +30,7 @@ class ProprietaireController extends Controller
             'numeroPieceIdentite' => $request->numeroPieceIdentite,
             'genre' => $request->genre
         ]);
+        return redirect('/list');
     }
 
 
