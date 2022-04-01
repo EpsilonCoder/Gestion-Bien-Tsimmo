@@ -3,6 +3,11 @@
 @include('../components.design_tasnim.menu')
 
 <div class="countainer">
+  @if(session('status'))
+        <div class="alert alert-success">
+            {{session('status')}}
+        </div>
+  @endif
 
 <table class="table">
     <thead>
@@ -36,7 +41,7 @@
             <a href="" class="btn btn-success" style="border-radius:15px;">edit</a>
         </td>
         <td>
-        <a href="" class="btn btn-danger" style="border-radius:15px; ">del</a>
+          <a href="{{'proprietes/supprimer/'.$propriete->id}}">supp</a>
         </td>
       </tr>
 
