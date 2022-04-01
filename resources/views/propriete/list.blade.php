@@ -21,7 +21,7 @@
         <th scope="col">Deduction</th>
         <th scope="col">Type</th>
         <th scope="col">Agence</th>
-        <th scope="col" colspan="2">Actions</th>
+        <th scope="col" colspan="2" class="text-center">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -38,10 +38,10 @@
         <td>{{$propriete->type->libelle}}</td>
         <td>{{$propriete->agence->libelle}}</td>
         <td>
-            <a href="" class="btn btn-success" style="border-radius:15px;">edit</a>
+            <a href="" class="btn btn-success" style="border-radius:10px;">edit</a>
         </td>
         <td>
-          <a href="{{'proprietes/supprimer/'.$propriete->id}}">supp</a>
+          <a href="{{'proprietes/supprimer/'.$propriete->id}}" class="btn btn-danger" style="border-radius:10px;">Supprimer</a>
         </td>
       </tr>
 
