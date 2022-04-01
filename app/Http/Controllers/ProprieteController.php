@@ -37,7 +37,7 @@ class ProprieteController extends Controller
             'type_id' => $request->type_id,
             'proprietaire_id' => $request->proprietaire_id
         ]);
-        return redirect('');
+        return redirect('proprietes');
     }
 
     public function lister()

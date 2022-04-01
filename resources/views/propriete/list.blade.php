@@ -33,7 +33,7 @@
         <td>{{$propriete->type->libelle}}</td>
         <td>{{$propriete->agence->libelle}}</td>
         <td>
-            <a href="" class="btn btn-success" style="border-radius:15px; ">edit</a>
+            <a href="" class="btn btn-success" style="border-radius:15px;">edit</a>
         </td>
         <td>
         <a href="" class="btn btn-danger" style="border-radius:15px; ">del</a>
