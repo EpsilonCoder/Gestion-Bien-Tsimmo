@@ -51,4 +51,30 @@ class ProprieteController extends Controller
         $propriete->delete();
         return redirect('proprietes')->with('status', 'Propriete supprimer');
     }
+    //Recuperation de l'id a modifier
+    public function modifier($id){
+        $types = Type::all();
+        $agences = Agence::all();
+        $proprietaires = Proprietaire::all();
+        $quartiers = Quartier::all();
+        $deductions = Deduction::all();
+        $propriete=Propriete::find($id);
+        return view('propriete.edit',compact('propriete','types', 'agences', 'proprietaires', 'quartiers', 'deductions'));
+    }
+    //Valider la modification qui provient du form
+    public function modification(Request $request,$id){
+        $propriete=Propriete::find($id);
+        $propriete->libelle=$request->libelle;
+        $propriete->superficie=$request->superficie;
+        $propriete->nombrePiece=$request->nombrePiece;
+        $propriete->quartier_id=$request->quartier_id;
+        $propriete->deduction_id=$request->deduction_id;
+        $propriete->agence_id=$request->agence_id;
+        $propriete->type_id=$request->type_id;
+        $propriete->proprietaire_id=$request->proprietaire_id;
+        $propriete->update();
+        if($propriete){
+            return redirect('proprietes')->with('status', 'Propriete modifier avec succees');
+        }
+    }
 }
