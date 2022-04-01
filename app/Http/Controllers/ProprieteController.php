@@ -37,16 +37,12 @@ class ProprieteController extends Controller
             'type_id' => $request->type_id,
             'proprietaire_id' => $request->proprietaire_id
         ]);
+        return redirect('');
     }
 
     public function lister()
     {
-        $types = Type::all();
-        $agences = Agence::all();
-        $proprietaires = Proprietaire::all();
-        $quartiers = Quartier::all();
-        $deductions = Deduction::all();
-        $propriete = new Propriete();
-        return view('propriete.list', compact('types', 'agences', 'proprietaires', 'quartiers', 'deductions'));
+        $proprietes=Propriete::all();
+        return view('propriete.list', compact('proprietes'));
     }
 }

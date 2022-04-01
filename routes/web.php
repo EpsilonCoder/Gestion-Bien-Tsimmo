@@ -20,9 +20,9 @@ Route::get('/propriété', [ProprietaireController::class, 'list']);
 
 
 
-Route::get('propriete', [ProprieteController::class, 'ajout']);
-Route::post('/enregistrer', [ProprieteController::class, 'enregistrer']);
-Route::get('/lister-propriete', [ProprieteController::class, 'lister']);
+Route::get('proprietes', [ProprieteController::class, 'lister']);
+Route::get('proprietes/propriete', [ProprieteController::class, 'ajout']);
+Route::post('proprietes/enregistrer', [ProprieteController::class, 'enregistrer']);
 
 
 require __DIR__ . '/auth.php';
