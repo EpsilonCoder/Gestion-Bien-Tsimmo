@@ -13,6 +13,7 @@
         <th scope="col">Date Naissance</th>
         <th scope="col">Lieu de Naissance</th>
         <th scope="col">Civilité</th>
+        <th scope="col">Genre</th>
         <th scope="col">Code Identité</th>
         <th scope="col">Numero Identité</th>
         <th scope="col" colspan="2" class="text-center">Actions</th>
@@ -27,6 +28,7 @@
         <td>{{$proprietaire->dateNaissance}}</td>
         <td>{{$proprietaire->lieuNaissance}}</td>
         <td>{{$proprietaire->civilite}}</td>
+        <td>{{$proprietaire->genre}}</td>
         <td>{{$proprietaire->codePieceIdentite}}</td>
         <td>{{$proprietaire->numeroPieceIdentite}}</td>
         <td class="text-center">
