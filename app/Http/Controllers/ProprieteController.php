@@ -37,7 +37,7 @@ class ProprieteController extends Controller
             'type_id' => $request->type_id,
             'proprietaire_id' => $request->proprietaire_id
         ]);
-        return redirect('proprietes');
+        return redirect('proprietes')->with('status', 'Propriete ajoutee avec succees');
     }
 
     public function lister()
@@ -52,7 +52,7 @@ class ProprieteController extends Controller
         return redirect('proprietes')->with('status', 'Propriete supprimer');
     }
     //Recuperation de l'id a modifier
-    public function modifier($id){
+    public function recupere($id){
         $types = Type::all();
         $agences = Agence::all();
         $proprietaires = Proprietaire::all();
@@ -62,7 +62,7 @@ class ProprieteController extends Controller
         return view('propriete.edit',compact('propriete','types', 'agences', 'proprietaires', 'quartiers', 'deductions'));
     }
     //Valider la modification qui provient du form
-    public function modification(Request $request,$id){
+    public function modifier(Request $request,$id){
         $propriete=Propriete::find($id);
         $propriete->libelle=$request->libelle;
         $propriete->superficie=$request->superficie;

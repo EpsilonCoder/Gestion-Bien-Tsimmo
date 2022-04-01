@@ -41,4 +41,11 @@ class ProprietaireController extends Controller
             'proprietaires' => $proprietaire
         ]);
     }
+
+    //Suppression du proprietaire
+    public function supprimer($id){
+        $proprietaire=Proprietaire::find($id);
+        $proprietaire->delete();
+        return redirect('/list');
+    }
 }

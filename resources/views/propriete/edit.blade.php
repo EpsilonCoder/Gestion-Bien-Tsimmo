@@ -1,15 +1,14 @@
-@include('../components.design_tasnim.entete')
+@include('./components.design_tasnim.entete')
 
-@include('../components.design_tasnim.menu')
+@include('./components.design_tasnim.menu')
 <div class="form-body">
     <div class="row">
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
                     <h3>Modifier une propriete</h3>
-                    <form  method="POST" action="{{ url('proprietes/modification/'.$propriete->id) }}">
+                    <form  method="POST" action="{{ url('proprietes/modifier/'.$propriete->id) }}">
                         @csrf
-                        <!-- @method('PATCH') -->
                         <div class="col-md-12">
                            <input class="form-control" type="text" name="libelle" value="{{$propriete->libelle}}" placeholder="Prenom" required>
                         </div>
@@ -75,4 +74,4 @@
         </div>
     </div>
 </div>
-@include('../components.design_tasnim.footer')
+@include('./components.design_tasnim.footer')

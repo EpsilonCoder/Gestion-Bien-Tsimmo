@@ -38,10 +38,10 @@
         <td>{{$propriete->type->libelle}}</td>
         <td>{{$propriete->agence->libelle}}</td>
         <td class="text-center">
-            <a href="{{'proprietes/modifier/'.$propriete->id}}"><i class="bi bi-pencil-square" style="font-size:1.5rem; color:primary"></i></a>
+            <a href="{{'proprietes/recupere/'.$propriete->id}}"><i class="bi bi-pencil-square" style="color:blue"></i></a>
         </td>
         <td class="text-center">
-          <a href="{{'proprietes/supprimer/'.$propriete->id}}"><i class="bi bi-trash3" style="font-size:1.5rem; color:#ce0033"></i></a>
+          <a href="{{'proprietes/supprimer/'.$propriete->id}}"><i class="bi bi-trash3" style="color:#ce0033"></i></a>
         </td>
       </tr>
     @endforeach

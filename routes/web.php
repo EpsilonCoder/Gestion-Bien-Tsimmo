@@ -17,7 +17,7 @@ Route::post('/proprietaire', [ProprietaireController::class, 'recuperation']);
 Route::get('list', [ProprietaireController::class, 'list']);
 
 Route::get('/propriété', [ProprietaireController::class, 'list']);
-Route::get('/proprietaire/supprimer/{id}',[ProprietaireController::class,'supprimer']);
+Route::get('proprietaires/supprimer/{id}',[ProprietaireController::class,'supprimer']);
 
 
 //Route pour la gestion propriete
@@ -25,6 +25,6 @@ Route::get('proprietes', [ProprieteController::class, 'lister']);
 Route::get('/propriete', [ProprieteController::class, 'ajout']);
 Route::post('proprietes/enregistrer', [ProprieteController::class, 'enregistrer']);
 Route::get('proprietes/supprimer/{id}',[ProprieteController::class,'supprimer']);
-Route::get('proprietes/modifier/{id}',[ProprieteController::class,'modifier']);
-Route::post('proprietes/modification/{id}',[ProprieteController::class,'modification']);
+Route::get('proprietes/recupere/{id}',[ProprieteController::class,'recupere']);
+Route::post('proprietes/modifier/{id}',[ProprieteController::class,'modifier']);
 require __DIR__ . '/auth.php';
