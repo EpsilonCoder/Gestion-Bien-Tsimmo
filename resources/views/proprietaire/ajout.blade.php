@@ -9,7 +9,7 @@
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
-                    <h3>Ajouter une proprietaire</h3>
+                    <h3>Ajouter un proprietaire</h3>
                     <form  method="POST" action="{{ url('proprietaire') }}">
                        @csrf
                         <div class="col-md-12">
