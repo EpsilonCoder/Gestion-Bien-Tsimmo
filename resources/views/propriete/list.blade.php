@@ -37,16 +37,14 @@
         <td>{{$propriete->deduction->montant}}</td>
         <td>{{$propriete->type->libelle}}</td>
         <td>{{$propriete->agence->libelle}}</td>
-        <td>
-            <a href="" class="btn btn-success" style="border-radius:10px;">edit</a>
+        <td class="text-center">
+            <a href=""><i class="bi bi-pencil-square" style="font-size:1.5rem; color:primary"></i></a>
         </td>
-        <td>
-          <a href="{{'proprietes/supprimer/'.$propriete->id}}" class="btn btn-danger" style="border-radius:10px;">Supprimer</a>
+        <td class="text-center">
+          <a href="{{'proprietes/supprimer/'.$propriete->id}}"><i class="bi bi-trash3" style="font-size:1.5rem; color:#ce0033"></i></a>
         </td>
       </tr>
-
     @endforeach
-
     </tbody>
   </table>
 

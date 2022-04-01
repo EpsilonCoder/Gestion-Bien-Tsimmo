@@ -45,7 +45,7 @@ class ProprieteController extends Controller
         $proprietes=Propriete::all();
         return view('propriete.list', compact('proprietes'));
     }
-    //Modification dans la db
+    //Suppression dans la db
     public function supprimer($id){
         $propriete=Propriete::find($id);
         $propriete->delete();

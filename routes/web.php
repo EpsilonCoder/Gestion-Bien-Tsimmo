@@ -11,15 +11,16 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('proprietaire.list');
 })->middleware(['auth'])->name('dashboard');
-
+//Route pour la gestion proprietaire
 Route::get('/proprietaire', [ProprietaireController::class, 'ajout']);
 Route::post('/proprietaire', [ProprietaireController::class, 'recuperation']);
 Route::get('list', [ProprietaireController::class, 'list']);
 
 Route::get('/propriété', [ProprietaireController::class, 'list']);
+Route::get('/proprietaire/supprimer/{id}',[ProprietaireController::class,'supprimer']);
 
 
-
+//Route pour la gestion propriete
 Route::get('proprietes', [ProprieteController::class, 'lister']);
 Route::get('/propriete', [ProprieteController::class, 'ajout']);
 Route::post('proprietes/enregistrer', [ProprieteController::class, 'enregistrer']);
