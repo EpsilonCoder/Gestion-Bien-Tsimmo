@@ -5,11 +5,11 @@
 
 
 <div class="form-body">
-    <div class="row">
+    <div class="row shadow">
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
-                    <h3>Ajouter une proprietaire</h3>
+                    <h3>Ajouter un proprietaire</h3>
                     <form  method="POST" action="{{ url('proprietaire') }}">
                        @csrf
                         <div class="col-md-12">
@@ -57,8 +57,8 @@
                            </select>
                        </div><br>
 
-                        <div class="form-button mt-3">
-                            <button id="submit" type="submit" class="btn btn-primary">Ajouter</button>
+                        <div class="mt-3">
+                            <button type="submit" class="btn text-white bg-black">Ajouter</button>
                         </div>
                     </form>
                 </div>

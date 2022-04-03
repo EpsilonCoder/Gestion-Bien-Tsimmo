@@ -5,9 +5,6 @@
     <div class="copyright">
       &copy; Copyright <strong><span>Tasnim Immo</span></strong>
     </div>
-    <div class="credits">
-      <a href="">EpsilonCoder</a>
-    </div>
   </div>
 </footer>
 

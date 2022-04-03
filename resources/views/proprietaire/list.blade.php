@@ -1,10 +1,14 @@
-@include('../components.design_tasnim.entete')
+@include('components.design_tasnim.entete')
 
-@include('../components.design_tasnim.menu')
+@include('components.design_tasnim.menu')
 
-<div class="countainer">
-
-<table class="table">
+<div class="countainer box"><br>
+  @if(session('status'))
+   <div class="alert alert-success">
+    {{session('status')}}
+   </div>
+@endif
+<table class="table shadow mx-auto bg-white" style="width:90%">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -13,9 +17,11 @@
         <th scope="col">Date Naissance</th>
         <th scope="col">Lieu de Naissance</th>
         <th scope="col">Civilité</th>
+        <th scope="col">Genre</th>
         <th scope="col">Code Identité</th>
         <th scope="col">Numero Identité</th>
-        <th scope="col">Actions</th>
+        <th scope="col" colspan="2" class="text-center">Actions</th>
+        <th scope="col" colspan="2" class="text-center btn bg-dark text-white"><a href='exporter-proprietaire'>PDF<i class="bi bi-file-earmark-pdf-fill"></i></a></th>
       </tr>
     </thead>
     <tbody>
@@ -27,12 +33,19 @@
         <td>{{$proprietaire->dateNaissance}}</td>
         <td>{{$proprietaire->lieuNaissance}}</td>
         <td>{{$proprietaire->civilite}}</td>
+        <td>{{$proprietaire->genre}}</td>
         <td>{{$proprietaire->codePieceIdentite}}</td>
         <td>{{$proprietaire->numeroPieceIdentite}}</td>
-        <td>
-            <a href="" class="btn btn-success" style="border-radius:15px; ">Modifier</a>
-            <a href="" class="btn btn-danger" style="border-radius:15px; ">Supprimer</a>
+        <td class="text-center">
+            <a href="{{'/proprietaires/recupere/'.$proprietaire->id}}"><i class="bi bi-pencil-fill" style="color:green"></i></a>
         </td>
+        <td class="text-center">
+          <a href="{{'/proprietaires/supprimer/'.$proprietaire->id}}"><i class="bi bi-trash-fill" style="color:red"></i></a>
+        </td>
+        <td class="text-center">
+          <a href=""><i class="bi bi-list-ul" ></i></a>
+        </td>
+        
       </tr>
 
     @endforeach
