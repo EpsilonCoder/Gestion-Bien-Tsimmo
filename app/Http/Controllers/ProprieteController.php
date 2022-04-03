@@ -55,7 +55,7 @@ class ProprieteController extends Controller
     {
         $propriete = Propriete::find($id);
         $propriete->delete();
-        return redirect('proprietes')->with('status', 'Propriete supprimer');
+        return redirect('proprietes')->with('status', 'Propriete supprimer avec succes');
     }
     //Recuperation de l'id a modifier
     public function recupere($id)

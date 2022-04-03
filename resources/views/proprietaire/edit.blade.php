@@ -2,7 +2,7 @@
 
 @include('components.design_tasnim.menu')
 
-
+<div class="countainer">
 
 <div class="form-body">
     <div class="row">
@@ -58,13 +58,14 @@
                        </div><br>
 
                         <div class="form-button mt-3">
-                            <button id="submit" type="submit" class="btn btn-primary">Modifier</button>
+                            <button id="submit" type="submit" class="btn bg-dark text-white">Modifier</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 

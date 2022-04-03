@@ -3,6 +3,11 @@
 @include('components.design_tasnim.menu')
 
 <div class="countainer box"><br>
+  @if(session('status'))
+   <div class="alert alert-success">
+    {{session('status')}}
+   </div>
+@endif
 
 <table class="table shadow mx-auto bg-white" style="width:90%">
     <thead>
@@ -37,6 +42,10 @@
         <td class="text-center">
           <a href="{{'/proprietaires/supprimer/'.$proprietaire->id}}"><i class="bi bi-trash-fill" style="color:red"></i></a>
         </td>
+        <td class="text-center">
+          <a href=""><i class="bi bi-list-ul" ></i></a>
+        </td>
+        
       </tr>
 
     @endforeach

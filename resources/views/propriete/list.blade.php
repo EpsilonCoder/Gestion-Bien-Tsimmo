@@ -43,6 +43,10 @@
         <td class="text-center">
           <a href="{{'proprietes/supprimer/'.$propriete->id}}"><i class="bi bi-trash" style="color:red"></i></a>
         </td>
+
+        <td class="text-center">
+          <a href=""><i class="bi bi-list-ul" ></i></a>
+        </td>
       </tr>
     @endforeach
     </tbody>

@@ -42,30 +42,33 @@ class ProprietaireController extends Controller
         ]);
     }
     //Recupere un proprietaire
-    public function recupere($id){
-        $proprietaire= Proprietaire::find($id);
-        return view('proprietaire.edit',compact('proprietaire'));
+    public function recupere($id)
+    {
+        $proprietaire = Proprietaire::find($id);
+        return view('proprietaire.edit', compact('proprietaire'));
     }
     //Modification du proprietaire
-    public function modifier(Request $request,$id){
-        // dd($_POST);
-        $proprietaire=Proprietaire::find($id);
-        $proprietaire->prenom=$request->prenom;
-        $proprietaire->nom=$request->nom;
-        $proprietaire->dateNaissance=$request->dateNaissance;
-        $proprietaire->lieuNaissance=$request->lieuNaissance;
-        $proprietaire->civilite=$request->civilite;
-        $proprietaire->codePieceIdentite=$request->codePieceIdentite;
-        $proprietaire->numeroPieceIdentite=$request->numeroPieceIdentite;
-        $proprietaire->genre=$request->genre;
+    public function modifier(Request $request, $id)
+    {
+
+        $proprietaire = Proprietaire::find($id);
+        $proprietaire->prenom = $request->prenom;
+        $proprietaire->nom = $request->nom;
+        $proprietaire->dateNaissance = $request->dateNaissance;
+        $proprietaire->lieuNaissance = $request->lieuNaissance;
+        $proprietaire->civilite = $request->civilite;
+        $proprietaire->codePieceIdentite = $request->codePieceIdentite;
+        $proprietaire->numeroPieceIdentite = $request->numeroPieceIdentite;
+        $proprietaire->genre = $request->genre;
         $proprietaire->update();
-        return redirect('/list');
+        return redirect('/list')->with('status', 'Proprietaire modifié avec succees');;
     }
 
     //Suppression du proprietaire
-    public function supprimer($id){
-        $proprietaire=Proprietaire::find($id);
+    public function supprimer($id)
+    {
+        $proprietaire = Proprietaire::find($id);
         $proprietaire->delete();
-        return redirect('/list');
+        return redirect('/list')->with('status', 'Proprietaire supprimé avec succees');;
     }
 }
