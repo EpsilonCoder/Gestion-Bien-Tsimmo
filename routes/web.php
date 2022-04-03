@@ -27,4 +27,11 @@ Route::post('proprietes/enregistrer', [ProprieteController::class, 'enregistrer'
 Route::get('proprietes/supprimer/{id}', [ProprieteController::class, 'supprimer']);
 Route::get('proprietes/recupere/{id}', [ProprieteController::class, 'recupere']);
 Route::post('proprietes/modifier/{id}', [ProprieteController::class, 'modifier']);
+
+Route::get('exporter-propriete', [ProprieteController::class, 'pdfpropriete']);
+Route::get('exporter-proprietaire', [ProprietaireController::class, 'pdfproprietaire']);
+
+Route::get('download-propriete', [ProprieteController::class, 'downloadpropriete']);
+Route::get('download-proprietaire', [ProprietaireController::class, 'downloadproprietaire']);
+
 require __DIR__ . '/auth.php';

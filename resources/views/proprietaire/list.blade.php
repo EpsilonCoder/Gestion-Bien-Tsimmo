@@ -8,7 +8,6 @@
     {{session('status')}}
    </div>
 @endif
-
 <table class="table shadow mx-auto bg-white" style="width:90%">
     <thead>
       <tr>
@@ -22,6 +21,7 @@
         <th scope="col">Code Identité</th>
         <th scope="col">Numero Identité</th>
         <th scope="col" colspan="2" class="text-center">Actions</th>
+        <th scope="col" colspan="2" class="text-center btn bg-dark text-white"><a href='exporter-proprietaire'>PDF<i class="bi bi-file-earmark-pdf-fill"></i></a></th>
       </tr>
     </thead>
     <tbody>

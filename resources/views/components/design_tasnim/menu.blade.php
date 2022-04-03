@@ -15,6 +15,8 @@
         <li><a href="list" class="nav-link scrollto"><i class="bi bi-person-lines-fill"></i> <span>Liste des proprataires</span></a></li>
         <li><a href="propriete" class="nav-link scrollto"><i class="bi bi-house-fill"></i> <span>Ajouter une proprietés</span></a></li>
         <li><a href="proprietes" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Liste des propriétés</span></a></li>
+        <li><a href="download-propriete" class="nav-link scrollto"><i class="bi bi-download"></i> <span>Telecharger PDF proprietés</span></a></li>
+        <li><a href="download-proprietaire" class="nav-link scrollto"><i class="bi bi-download"></i> <span>Telecharger PDF propriétaires</span></a></li>
       
       </ul>
     </nav>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Proprietaire;
 use Illuminate\Http\Request;
 
@@ -70,5 +71,23 @@ class ProprietaireController extends Controller
         $proprietaire = Proprietaire::find($id);
         $proprietaire->delete();
         return redirect('/list')->with('status', 'Proprietaire supprimé avec succees');;
+    }
+
+    public function pdfproprietaire()
+    {
+        $proprietaires = Proprietaire::all();
+        $pdf = PDF::loadView('exporter.proprietaire', [
+            'proprietaires' => $proprietaires
+        ]);
+        return $pdf->stream('proprietaire.pdf');
+    }
+
+    public function downloadproprietaire()
+    {
+        $proprietaires = Proprietaire::all();
+        $pdf = PDF::loadView('exporter.proprietaire', [
+            'proprietaires' => $proprietaires
+        ]);
+        return $pdf->download('proprietaire.pdf');
     }
 }

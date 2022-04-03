@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Type;
 use App\Models\Agence;
 use App\Models\Quartier;
-use App\Models\Type;
 use App\Models\Deduction;
 use App\Models\Propriete;
 use App\Models\Proprietaire;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class ProprieteController extends Controller
 {
+
 
     public function __construct()
     {
@@ -84,5 +87,23 @@ class ProprieteController extends Controller
         if ($propriete) {
             return redirect('proprietes')->with('status', 'Propriete modifier avec succees');
         }
+    }
+
+    public function pdfpropriete()
+    {
+        $propriete = Propriete::all();
+        $pdf = PDF::loadView('exporter.propriete', [
+            'proprietes' => $propriete
+        ]);
+        return $pdf->stream('propriete.pdf');
+    }
+
+    public function downloadpropriete()
+    {
+        $propriete = Propriete::all();
+        $pdf = PDF::loadView('exporter.propriete', [
+            'proprietes' => $propriete
+        ]);
+        return $pdf->download('propriete.pdf');
     }
 }
