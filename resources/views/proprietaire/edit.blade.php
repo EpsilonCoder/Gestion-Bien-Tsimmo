@@ -69,8 +69,4 @@
 
 
 
-
-
-
-
 @include('components.design_tasnim.footer')

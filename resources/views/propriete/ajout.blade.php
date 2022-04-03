@@ -10,15 +10,15 @@
                     <form  method="POST" action="{{ url('proprietes/enregistrer') }}">
                        @csrf
                         <div class="col-md-12">
-                           <input class="form-control" type="text" name="libelle" placeholder="Prenom" required>
+                           <input class="form-control" type="text" name="libelle" placeholder="Libelle" required>
                         </div>
 
                         <div class="col-md-12">
-                            <input class="form-control" type="text" name="superficie" placeholder="nom" required>
-                         </div><br>
+                            <input class="form-control" type="text" name="superficie" placeholder="La superficie" required>
+                         </div>
                         
                          <div class="col-md-12">
-                            <input class="form-control" type="number" name="nombrePiece" required>
+                            <input class="form-control" type="text" name="nombrePiece" placeholder="Nombre de piece" required>
                          </div>
                        <div class="col-md-12">
                             <select class="form-select mt-3" required  name="proprietaire_id" >
@@ -65,9 +65,9 @@
 
                            </select>
                        </div><br>
-                        <div class="form-button mt-3">
-                            <button id="submit" type="submit" class="btn btn-primary">Ajouter</button>
-                        </div>
+                       <div class="mt-3">
+                        <button type="submit" class="btn text-white bg-black">Ajouter</button>
+                       </div>
                     </form>
                 </div>
             </div>

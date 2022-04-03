@@ -1,18 +1,19 @@
-@include('../components.design_tasnim.entete')
+@include('components.design_tasnim.entete')
 
-@include('../components.design_tasnim.menu')
+@include('components.design_tasnim.menu')
 
-<div class="countainer">
-  @if(session('status'))
-        <div class="alert alert-success">
-            {{session('status')}}
-        </div>
-  @endif
+  
+  <div class="countainer box"><br>
+    @if(session('status'))
+          <div class="alert alert-success">
+              {{session('status')}}
+          </div>
+    @endif
 
-<table class="table">
+    <table class="table shadow mx-auto bg-white" style="width:90%;">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Libelle</th>
         <th scope="col">Superficie</th>
         <th scope="col">Pieces</th>
@@ -25,10 +26,9 @@
       </tr>
     </thead>
     <tbody>
-        <!--J ai pas pu tous gerer -->
     @foreach ($proprietes as $propriete)
       <tr>
-        <th scope="row">{{$propriete->id}}</th>
+        <th scope="row shadow">{{$propriete->id}}</th>
         <td>{{$propriete->libelle}}</td>
         <td>{{$propriete->superficie}}</td>
         <td>{{$propriete->nombrePiece}}</td>
@@ -38,10 +38,10 @@
         <td>{{$propriete->type->libelle}}</td>
         <td>{{$propriete->agence->libelle}}</td>
         <td class="text-center">
-            <a href="{{'proprietes/recupere/'.$propriete->id}}"><i class="bi bi-pencil-square" style="color:blue"></i></a>
+            <a href="{{'proprietes/recupere/'.$propriete->id}}"><i class="bi bi-pencil-fill" style="color:blue"></i></a>
         </td>
         <td class="text-center">
-          <a href="{{'proprietes/supprimer/'.$propriete->id}}"><i class="bi bi-trash3" style="color:#ce0033"></i></a>
+          <a href="{{'proprietes/supprimer/'.$propriete->id}}"><i class="bi bi-trash" style="color:red"></i></a>
         </td>
       </tr>
     @endforeach
@@ -49,10 +49,5 @@
   </table>
 
 </div>
-
-
-
-
-
 
 @include('components.design_tasnim.footer')

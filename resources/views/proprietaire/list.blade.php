@@ -1,13 +1,13 @@
-@include('../components.design_tasnim.entete')
+@include('components.design_tasnim.entete')
 
-@include('../components.design_tasnim.menu')
+@include('components.design_tasnim.menu')
 
-<div class="countainer">
+<div class="countainer box"><br>
 
-<table class="table">
+<table class="table shadow mx-auto bg-white" style="width:90%">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Prenom</th>
         <th scope="col">Nom</th>
         <th scope="col">Date Naissance</th>
@@ -32,10 +32,10 @@
         <td>{{$proprietaire->codePieceIdentite}}</td>
         <td>{{$proprietaire->numeroPieceIdentite}}</td>
         <td class="text-center">
-            <a href="{{'proprietaires/recupere/'.$proprietaire->id}}"><i class="bi bi-pencil-square" style="color:blue"></i></a>
+            <a href="{{'/proprietaires/recupere/'.$proprietaire->id}}"><i class="bi bi-pencil-fill" style="color:green"></i></a>
         </td>
         <td class="text-center">
-          <a href="{{'proprietaires/supprimer/'.$proprietaire->id}}"><i class="bi bi-trash3" style="color:#ce0033"></i></a>
+          <a href="{{'/proprietaires/supprimer/'.$proprietaire->id}}"><i class="bi bi-trash-fill" style="color:red"></i></a>
         </td>
       </tr>
 
